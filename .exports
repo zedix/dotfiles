@@ -1,3 +1,9 @@
+# Shortcut to this dotfiles path is $ZSH
+export ZSH=$HOME/dotfiles
+
+# Setup PATH
+export PATH="/usr/local/bin:/usr/local/sbin:$ZSH/bin:$PATH"
+
 # Make vim the default editor
 export EDITOR="vim"
 
@@ -5,9 +11,10 @@ export EDITOR="vim"
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
+export HISTFILE=~/.zhistory
 
 # Make bash history ignore duplicates and commands such as ls, ll, cd, pwd
-export HISTIGNORE="&:l[sl]:cd:cd -:pwd:exit:date:* --help"
+export HISTIGNORE="&:l[sla]:cd:cd -:pwd:exit:date:* --help"
 
 # Prefer US English and use UTF-8
 # export LANG="en_US"

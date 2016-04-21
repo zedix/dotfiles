@@ -1,6 +1,6 @@
 [user]
     name = Louis-Xavier Vignal
-    email = XXX
+    email = xxx
 
 [color]
     ui = auto
@@ -57,3 +57,24 @@
 
 [merge]
     conflictstyle = diff3
+
+[push]
+    # See `git help config` (search for push.default)
+    # for more information on different options of the below setting.
+    #
+    # Setting to git 2.0 default to surpress warning message
+    default = simple
+
+[filter "media"]
+    clean = git-media-clean %f
+    smudge = git-media-smudge %f
+
+[filter "hawser"]
+    clean = git hawser clean %f
+    smudge = git hawser smudge %f
+    required = true
+
+[filter "lfs"]
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true

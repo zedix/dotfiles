@@ -44,26 +44,30 @@ alias tf='tail -f'
 alias tn='tail -n'
 alias df="df -h"
 alias grep='GREP_COLOR="1;37;45" LANG=C grep --color=auto'
-alias view="vim -p -R"
-alias ip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
 alias ports='netstat -tulanp'
-alias reload!='source ~/.bash_profile'
-alias photos='cd /home/helix/helix/vignal.me/photos'
+alias reload!='. ~/.zshrc'
+alias pp='python -mjson.tool'
+alias meteo='curl -4 http://wttr.in/Paris'
+alias week='date +%V'
 
+# IP adresses
+alias ip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
+alias localip="ipconfig getifaddr en1"
+
+# Vagrant
+alias vh='vagrant halt'
+alias vu='vagrant up'
 
 # -----------------------------------------------------------------------------
 # GIT
 # -----------------------------------------------------------------------------
 
-alias gs='git status'
-alias ga='git add'
-alias gb='git branch'
-alias gc='git commit'
-alias gd='git diff'
+alias push="git push origin master"
 alias go='git checkout'
-alias gk='gitk --all&'
-alias gx='gitx --all'
-alias gr='git svn rebase'
+alias gom='git checkout master'
+
+# Undo a `git push`
+alias undopush="git push -f origin HEAD^:master"
 
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
@@ -76,6 +80,11 @@ if [ $? -eq 0 ]; then
     }
 fi
 
+# Copy a local checkout without the .git stuff
+function gitexport(){
+    mkdir -p "$1"
+    git archive master | tar -x -C "$1"
+}
 
 # -----------------------------------------------------------------------------
 # Mac OS
@@ -85,13 +94,7 @@ fi
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
 # Flush the DNS on Mac
-alias network.dnsflush='dscacheutil -flushcache'
-
-# Open Sublime Editor
-alias slt='open -a "Sublime Text 2"'
-# also/or do this:
-# ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
-
+alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder"
 
 # Show normally hidden system and dotfile types of files
 # in Mac OSX Finder
