@@ -1,9 +1,13 @@
-#! /usr/bin/env zsh
+#!/usr/bin/sh
 
 if [ ! -d ~/dotfiles ]; then
 
-    git clone https://github.com/zedix/dotfiles.git ~/dotfiles
+    # Use zsh
+    chsh -s $(which zsh)
+
+    # Install prezto & dotfiles
     git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
+    git clone https://github.com/zedix/dotfiles.git ~/dotfiles
 
     source ~/dotfiles/.helpers
     echo_title_update "\`dotfiles\`"
@@ -23,5 +27,5 @@ if [ ! -d ~/dotfiles ]; then
     echo_success
 
 else
-    echo "dotfiles are already installed"
+    echo "Dotfiles are already installed"
 fi
