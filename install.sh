@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+! /usr/bin/env zsh
 
 if [ ! -d ~/dotfiles ]; then
 
