@@ -20,8 +20,9 @@ install findutils
 install vim --override-system-vi
 
 # Install other useful binaries
-install ack
+#install ack
 install git
+install hub
 install node
 
 # Remove outdated versions from the cellar

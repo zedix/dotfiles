@@ -25,7 +25,7 @@
 [core]
     whitespace = space-before-tab,-indent-with-non-tab,tab-in-indent,trailing-space,cr-at-eol,tabwidth=4
     warnAmbiguousRefs = false
-    editor = vim
+    editor = atom --wait
     #editor = ~/bin/subl -n -w
 
 [alias]
@@ -40,6 +40,7 @@
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     hist = log --graph --pretty=format:'%Cred%h%Creset - %C(bold blue)<%an>%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) ' --abbrev-commit --max-count 20
+    hub = git
     ls = ls-files
     rb = pull --rebase
     svnid = !git --no-pager log --all --pretty=format:\"%H %s\" --grep
