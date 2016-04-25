@@ -1,5 +1,5 @@
 # Shortcut to this dotfiles path is $ZSH
-export ZSH=$HOME/dotfiles
+#export ZSH=$HOME/dotfiles
 
 # Setup PATH
 export PATH="/usr/local/bin:/usr/local/sbin:$ZSH/bin:$PATH"
