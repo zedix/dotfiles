@@ -3,20 +3,23 @@
 # Change default shell to zsh
 chsh -s $(which zsh)
 
+# Load helpers
+source ~/dotfiles/.helpers
+
 # Install prezto repository
 if [ ! -d ~/.zprezto ]; then
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
+    echo_title_install "\`zprezto\`"
+    git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
 fi
 
 # Install dotfiles repository
 if [ ! -d ~/dotfiles ]; then
-  git clone https://github.com/zedix/dotfiles.git ~/dotfiles
+    echo_title_install "\`dotfiles\`"
+    git clone https://github.com/zedix/dotfiles.git ~/dotfiles
 fi
 
-source ~/dotfiles/.helpers
-echo_title_update "\`dotfiles\`"
-
 # Symlink dotfiles
+echo_title_install "\`dotfiles\`"
 for file in .{aliases,aliases_local,editorconfig,exports,gitconfig,gitignore,vim,vimrc,zpreztorc,zshrc}; do
     echo_title_update ~/$file
     [ -r ~/dotfiles/$file ] && ln -sf ~/dotfiles/$file ~/$file 2> /dev/null
