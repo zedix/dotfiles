@@ -11,7 +11,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Load the shell dotfiles
-for file in ~/.{exports,aliases,helpers}; do
+for file in ~/.{exports,aliases,aliases_private,helpers}; do
     [ -r "$file" ] && source "$file"
 done
 unset file
