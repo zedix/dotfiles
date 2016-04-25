@@ -3,9 +3,6 @@
 # Change default shell to zsh
 chsh -s $(which zsh)
 
-# Load helpers
-source ~/dotfiles/.helpers
-
 # Install prezto repository
 if [ ! -d ~/.zprezto ]; then
     echo_title_install "\`zprezto\`"
@@ -17,6 +14,9 @@ if [ ! -d ~/dotfiles ]; then
     echo_title_install "\`dotfiles\`"
     git clone https://github.com/zedix/dotfiles.git ~/dotfiles
 fi
+
+# Load helpers
+source ~/dotfiles/.helpers
 
 # Symlink dotfiles
 echo_title_install "\`dotfiles\`"
