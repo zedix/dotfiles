@@ -5,13 +5,11 @@ chsh -s $(which zsh)
 
 # Install prezto repository
 if [ ! -d ~/.zprezto ]; then
-    echo_title_install "\`zprezto\`"
     git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
 fi
 
 # Install dotfiles repository
 if [ ! -d ~/dotfiles ]; then
-    echo_title_install "\`dotfiles\`"
     git clone https://github.com/zedix/dotfiles.git ~/dotfiles
 fi
 
