@@ -17,17 +17,13 @@ source ~/dotfiles/.helpers
 echo_title_update "\`dotfiles\`"
 
 # Symlink dotfiles
-ln -sf ~/dotfiles/.aliases ~/.aliases 2> /dev/null
-ln -sf ~/dotfiles/.editorconfig ~/.editorconfig 2> /dev/null
-ln -sf ~/dotfiles/.exports ~/.exports 2> /dev/null
-ln -sf ~/dotfiles/.gitconfig ~/.gitconfig 2> /dev/null
-ln -sf ~/dotfiles/.gitignore ~/.gitignore 2> /dev/null
-ln -sf ~/dotfiles/.vim ~/.vim 2> /dev/null
-ln -sf ~/dotfiles/.vimrc ~/.vimrc 2> /dev/null
-ln -sf ~/dotfiles/.zshrc ~/.zshrc 2> /dev/null
+for file in .{aliases,aliases_local,editorconfig,exports,gitconfig,gitignore,vim,vimrc,zpreztorc,zshrc}; do
+    echo_title_update ~/$file
+    [ -r ~/dotfiles/$file ] && ln -sf ~/dotfiles/$file ~/$file 2> /dev/null
+done
+unset file
 
-# Symlink zprezto config & custom prompt
-ln -sf ~/dotfiles/.zpreztorc ~/.zpreztorc 2> /dev/null
+# Symlink zprezto custom prompt
 ln -sf ~/dotfiles/.zprezto/modules/prompt/functions/prompt_zedix_setup ~/.zprezto/modules/prompt/functions/prompt_zedix_setup 2> /dev/null
 
 # Reload
