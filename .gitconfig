@@ -25,7 +25,7 @@
 [core]
     whitespace = space-before-tab,-indent-with-non-tab,tab-in-indent,trailing-space,cr-at-eol,tabwidth=4
     warnAmbiguousRefs = false
-    editor = atom --wait
+    editor = subl -n -w
     #editor = ~/bin/subl -n -w
 
 [alias]
@@ -52,6 +52,10 @@
     cpc = cherry-pick --continue
     wdfc = diff -b -w --word-diff=color --cached --word-diff-regex='\\(|\\)|[^[:space:]()]+'
     files = show --pretty="format:" --name-only
+
+[diff]
+    # git 2.9
+    compactionHeuristic = true
 
 [rerere]
     enabled = true
