@@ -1,6 +1,6 @@
 [user]
-    name = zedix
-    email = xxx
+  name = zedix
+	email = xxx
 
 [color]
     ui = auto
@@ -25,7 +25,8 @@
 [core]
     whitespace = space-before-tab,-indent-with-non-tab,tab-in-indent,trailing-space,cr-at-eol,tabwidth=4
     warnAmbiguousRefs = false
-    editor = subl -n -w
+    editor = atom --wait
+    #editor = subl -n -w
     #editor = ~/bin/subl -n -w
 
 [alias]
