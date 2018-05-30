@@ -25,9 +25,9 @@
 [core]
     whitespace = space-before-tab,-indent-with-non-tab,tab-in-indent,trailing-space,cr-at-eol,tabwidth=4
     warnAmbiguousRefs = false
-    editor = atom --wait
-    #editor = subl -n -w
+    #editor = atom --wait
     #editor = ~/bin/subl -n -w
+    editor = code --wait
 
 [alias]
     st = status
@@ -84,3 +84,6 @@
     clean = git-lfs clean %f
     smudge = git-lfs smudge %f
     required = true
+
+[url "https://"]
+    insteadOf = git://
