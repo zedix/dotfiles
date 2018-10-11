@@ -4,8 +4,11 @@
 # Setup PATH
 export PATH="/usr/local/bin:/usr/local/sbin:$ZSH/bin:$PATH"
 
-# Make vim the default editor
-export EDITOR="atom"
+# Setup PATH for Yarn
+export PATH="$PATH:$HOME/.yarn/bin"
+
+# Make VS Code the default editor
+export EDITOR="code -w"
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
