@@ -1,8 +1,10 @@
 [user]
-  name = zedix
-	email = xxx
+    name = zedix
+    email = xxx
 
 [color]
+    # Use colors in Git commands that are capable of colored output when
+    # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
     ui = auto
 
 [color "branch"]
@@ -44,6 +46,8 @@
     hub = git
     ls = ls-files
     rb = pull --rebase
+    # Interactive rebase with the given number of latest commits
+    reb = "!r() { git rebase -i HEAD~$1; }; r"
     svnid = !git --no-pager log --all --pretty=format:\"%H %s\" --grep
     rmd = !git status --porcelain | awk ' /^ D/ { print $2 }' | xargs git rm
     ff = merge --ff-only
@@ -53,6 +57,8 @@
     cpc = cherry-pick --continue
     wdfc = diff -b -w --word-diff=color --cached --word-diff-regex='\\(|\\)|[^[:space:]()]+'
     files = show --pretty="format:" --name-only
+    # List contributors with number of commits
+    contributors = shortlog --summary --numbered
 
 [diff]
     # git 2.9
