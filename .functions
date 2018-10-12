@@ -15,3 +15,7 @@ function dataurl() {
 function most_commits() {
     git log --no-merges --format='%aE' $1 | sort | uniq -c | sort
 }
+
+function kill-port() {
+    lsof -t -i tcp:$1 | xargs kill
+}
