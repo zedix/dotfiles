@@ -1,17 +1,11 @@
-# Shortcut to this dotfiles path is $ZSH
-#export ZSH=$HOME/dotfiles
+# Make VSCode the default editor
+export EDITOR="code -w"
 
 # Setup PATH
 export PATH="/usr/local/bin:/usr/local/sbin:$ZSH/bin:$PATH"
 
-# Setup PATH for Yarn
-export PATH="$PATH:$HOME/.yarn/bin"
-
-# Setup PATH for Nvm
+# Setup PATH for NVM
 export NVM_DIR="$HOME/.nvm"
-
-# Make VS Code the default editor
-export EDITOR="code -w"
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
@@ -26,8 +20,8 @@ export HISTIGNORE="&:l[sla]:cd:cd -:pwd:exit:date:* --help"
 export LANG="en_US.UTF-8"
 # export LC_ALL="en_US.UTF-8"
 
-# Highlight section titles in manual pages
-export LESS_TERMCAP_md="$ORANGE"
+# Highlight section titles in manual pages.
+export LESS_TERMCAP_md="${yellow}";
 
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
