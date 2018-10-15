@@ -1,0 +1,80 @@
+{
+    // Ayu Mirage, Atom One Dark, One Dark Pro, Oceanic Next, Sapphire
+    "workbench.colorTheme": "Gloom Contrast (rainglow)",
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": true,
+    "workbench.sideBar.location": "left",
+    "editor.fontFamily": "Operator Mono",
+    "editor.fontSize": 15,
+    "editor.insertSpaces": true,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "boundary",
+    "editor.renderControlCharacters": false,
+    "editor.formatOnSave": false,
+    // Enable per-language
+    "[css]": {
+        "editor.formatOnSave": false
+    },
+    "[javascript]": {
+        "editor.formatOnSave": false
+    },
+    "[json]": {
+        "editor.formatOnSave": false
+    },
+    "[vue]": {
+        "editor.formatOnSave": true
+    },
+    "explorer.openEditors.visible": 0,
+    "importCost.javascriptExtensions": [
+        "\\.vue$"
+    ],
+    "stylelint.enable": true,
+    "css.validate": false,
+    "eslint.enable": true,
+    "eslint.options": {
+        "extensions": [
+            ".html",
+            ".js",
+            ".vue",
+            ".jsx"
+        ]
+    },
+    "eslint.nodePath": "${workspaceFolderBasename}/node_modules/",
+    "eslint.validate": [
+        {
+            "language": "html",
+            "autoFix": true
+        },
+        {
+            "language": "vue",
+            "autoFix": true
+        },
+        {
+            "language": "javascript",
+            "autoFix": true
+        },
+        {
+            "language": "javascriptreact",
+            "autoFix": true
+        }
+    ],
+    "files.associations": {
+        "Vagrantfile": "ruby",
+        "all": "yaml",
+        "development": "yaml",
+        "production": "yaml",
+        ".eslintrc": "jsonc",
+        ".eslintrc.json": "jsonc",
+        ".env": "ini",
+        ".env.*": "ini"
+    },
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+
+    // ClubMed
+    "javascript.validate.enable": false,
+    "flow.enabled": true,
+    "flow.useNPMPackagedFlow": true,
+    "flow.pathToFlow": "${workspaceFolderBasename}/node_modules/.bin/flow",
+}
