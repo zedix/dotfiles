@@ -1,24 +1,5 @@
 # Setup Mac OS X
 
-## System Preferences & Security
-
-System Preferences > Keyboard > Text > Disable “Correct spelling automatically”
-System Preferences > Security and Privacy > FileVault > On (makes sure SSD is securely encrypted)
-System Preferences > Security and Privacy > Firewall > On (extra security measure)
-System Preferences > Security and Privacy > General > Allow App Store and identified developers
-System Preferences > File Sharing > Off
-System Preferences > Trackpad > Tap to click
-
-Show hidden files
-```
-defaults write com.apple.finder AppleShowAllFiles YES
-```
-
-Show path bar
-```
-defaults write com.apple.finder ShowPathbar -bool true
-```
-
 ## Install Homebrew + packages
 
 https://brew.sh/
@@ -34,6 +15,7 @@ Homebrew installs packages to their own directory and then symlinks their files 
 ❯ brew install tree
 ❯ brew install git (2.17.1)
 ❯ brew install node (v8.9.3)
+❯ brew install nvm
 ❯ brew install yarn (1.9.4)
 ❯ brew install ansible (2.6.2)
 
@@ -41,23 +23,11 @@ Homebrew installs packages to their own directory and then symlinks their files 
 ❯ yarn global add gulp-cli
 ❯ yarn global add lighthouse
 
-# ❯ brew install nvm
-
 # ❯ brew install httpie
-# ❯ brew install php71
-# ❯ brew install php71-intl
+# ❯ brew install php72
+# ❯ brew install php72-intl
 # ❯ brew install packer
 # ❯ brew install hub
-```
-
-## Configure NVM
-
-```sh
-❯ nvm install node      # install most recent Node stable version
-❯ nvm ls                # list installed Node version
-❯ nvm use node          # use stable as current version
-❯ nvm ls-remote           # list all the Node versions you can install
-❯ nvm alias default node  # set the installed stable version as the default Node
 ```
 
 ## Install Z shell
@@ -72,6 +42,7 @@ Homebrew installs packages to their own directory and then symlinks their files 
 ```sh
 ❯ zsh -c "`curl -fsSL https://raw.githubusercontent.com/zedix/dotfiles/master/install.sh`"
 ❯ git config --global user.email user@domain.com
+❯ chsh -s /bin/zsh
 ```
 
 ## Install SSH keys
@@ -96,31 +67,51 @@ Enter same passphrase again: [Type passphrase again]
 ❯ ssh-add -K ~/.ssh/id_rsa.pub
 ```
 
-## Install softwares
+## Configure NVM
+
+```sh
+❯ nvm install node        # install most recent Node stable version
+❯ nvm ls                  # list installed Node version
+❯ nvm use node            # use stable as current version
+❯ nvm ls-remote           # list all the Node versions you can install
+❯ nvm alias default node  # set the installed stable version as the default Node
+```
+
+## System Preferences & Security
+
+System Preferences > Keyboard > Text > Disable “Correct spelling automatically”
+System Preferences > Security and Privacy > FileVault > On (makes sure SSD is securely encrypted)
+System Preferences > Security and Privacy > Firewall > On (extra security measure)
+System Preferences > Security and Privacy > General > Allow App Store and identified developers
+System Preferences > File Sharing > Off
+System Preferences > Trackpad > Tap to click
+
+Run `~/dotfiles/bin/set-default`
+
+## Install Applications
 
 ```sh
 ❯ brew cask search <package>
-❯ brew cask 'appcleaner'
 ❯ brew cask install 'dropbox'
 ```
 
-- 🍏 1Password
+- ⬇ 1Password 7
 - ⬇ [Alfred 3](http://www.alfredapp.com/) Replacement for spotlight.
 - ⬇ [App Cleaner](https://freemacsoft.net/appcleaner/)
-- ⬇ Bartender 3
+- ⬇ [Bartender 3](https://www.macbartender.com/)
 - ⬇ Battle.net
 - ⬇ [Contrast Ratio](http://leaverou.github.io/contrast-ratio/)
 - ⬇ Disk Inventory X
 - ⬇ [Docker](https://docs.docker.com/docker-for-mac/install/)
 - ⬇ [Dropbox](https://www.dropbox.com/) File syncing to the cloud.
-- ⬇ EyeTV
+- ⬇ [EyeTV](https://www.geniatech.eu/fr/software/)
 - ⬇ [Firefox](https://www.mozilla.org/fr/firefox/new/)
 - ⬇ [F.lux](https://justgetflux.com/)
-- ⬇ Google Chrome
+- ⬇ [Google Chrome](https://www.google.com/intl/fr_ALL/chrome/)
 - ⬇ [ImageAlpha](https://pngmini.com/)
 - ⬇ [ImageOptim](https://imageoptim.com/mac)
 - ⬇ iStat Menus
-- ⬇ [iTerm](https://www.iterm2.com/)
+- ⬇ [iTerm2](https://www.iterm2.com/)
 - ⬇ [LittleSnitch](https://www.obdev.at/products/littlesnitch/index.html)
 - ⬇ [Memory Clean 2](https://fiplab.com/apps/memory-clean-for-mac)
 - ⬇ Molotov
@@ -138,15 +129,32 @@ Enter same passphrase again: [Type passphrase again]
 - ⬇ [Shift](https://tryshift.com/)
 - ⬇ [Sip](https://sipapp.io/) - Color picker
 - ⬇ Skype
-- ⬇ Slack - App Store
-- ⬇ Spotify
+- 🍏 Slack
+- ⬇ [Spotify](https://www.spotify.com/fr/download/mac/)
+- ⬇ [Station](https://getstation.com/)
 - ⬇ Textual 5
 - ⬇ [Transmission](http://www.transmissionbt.com/) A fast, easy and free BitTorrent client.
 - 🍏 Tweetbot
-- ⬇ TweetDeck
 - 🍏 [Tyme 2](https://www.tyme-app.com) - https://www.producthunt.com/posts/tyme-2
 - ⬇ Unison
-- ⬇ Vagrant
-- ⬇ VirtualBox
+- ⬇ [Vagrant](https://www.vagrantup.com/downloads.html)
+- ⬇ [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 - ⬇ VLC
-- ⬇ VSCode
+- ⬇ [VSCode](https://code.visualstudio.com/download)
+
+
+## Configure Applications
+
+- Alfred 3
+    -> System Preferences > Keyboard > Shortcuts > Spotlight > [ ]
+
+- iTerm2
+    -> General > [X] Update to beta versions
+    -> General > Startup > Open Window Default Arrangement
+    -> Appearance > [ ] Show per pane title bar
+    -> Appearance > [ ] Hide scrollbars
+    -> Appearance > Theme Dark
+    -> Profile > Text > Cursor > Vertical bar
+    -> Profile > Text > Cursor > Use thin stroke for anti-aliased text: **Never**
+    -> Profile > Text > Font > 15pt Operator Mono Book (Anti-aliased)
+    -> Profile > Terminal > Scroll 10 000
