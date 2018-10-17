@@ -45,7 +45,7 @@ Homebrew installs packages to their own directory and then symlinks their files 
 ❯ chsh -s /bin/zsh
 ```
 
-## Install SSH keys
+## Set up SSH public key authentication on Github / Bitbucket
 
 https://help.github.com/articles/connecting-to-github-with-ssh/
 
@@ -67,6 +67,20 @@ Enter same passphrase again: [Type passphrase again]
 ❯ ssh-add -K ~/.ssh/id_rsa.pub
 ```
 
+## Set up SSH public key authentication on remote servers
+
+Using [ssh-copy-id](https://www.ssh.com/ssh/copy-id) tool:
+
+```sh
+❯ ssh-copy-id remote@XX.XX.XX.XX -pXXXX
+```
+
+Or manually:
+
+```sh
+❯ cat ~/.ssh/id_rsa.pub | ssh remote@XX.XX.XX.XX -pXXXX "mkdir -p ~/.ssh && chmod 700 ~/.ssh && cat >>  ~/.ssh/authorized_keys"
+```
+
 ## Configure NVM
 
 ```sh
@@ -79,12 +93,12 @@ Enter same passphrase again: [Type passphrase again]
 
 ## System Preferences & Security
 
-System Preferences > Keyboard > Text > Disable “Correct spelling automatically”
-System Preferences > Security and Privacy > FileVault > On (makes sure SSD is securely encrypted)
-System Preferences > Security and Privacy > Firewall > On (extra security measure)
-System Preferences > Security and Privacy > General > Allow App Store and identified developers
-System Preferences > File Sharing > Off
-System Preferences > Trackpad > Tap to click
+- System Preferences > Keyboard > Text > Disable “Correct spelling automatically”
+- System Preferences > Security and Privacy > FileVault > On (makes sure SSD is securely encrypted)
+- System Preferences > Security and Privacy > Firewall > On (extra security measure)
+- System Preferences > Security and Privacy > General > Allow App Store and identified developers
+- System Preferences > File Sharing > Off
+- System Preferences > Trackpad > Tap to click
 
 Run `~/dotfiles/bin/set-default`
 
@@ -146,15 +160,15 @@ Run `~/dotfiles/bin/set-default`
 ## Configure Applications
 
 - Alfred 3
-    -> System Preferences > Keyboard > Shortcuts > Spotlight > [ ]
+    - System Preferences > Keyboard > Shortcuts > Spotlight > [ ]
 
 - iTerm2
-    -> General > [X] Update to beta versions
-    -> General > Startup > Open Window Default Arrangement
-    -> Appearance > [ ] Show per pane title bar
-    -> Appearance > [ ] Hide scrollbars
-    -> Appearance > Theme Dark
-    -> Profile > Text > Cursor > Vertical bar
-    -> Profile > Text > Cursor > Use thin stroke for anti-aliased text: **Never**
-    -> Profile > Text > Font > 15pt Operator Mono Book (Anti-aliased)
-    -> Profile > Terminal > Scroll 10 000
+    - General > [X] Update to beta versions
+    - General > Startup > Open Window Default Arrangement
+    - Appearance > [ ] Show per pane title bar
+    - Appearance > [ ] Hide scrollbars
+    - Appearance > Theme Dark
+    - Profile > Text > Cursor > Vertical bar
+    - Profile > Text > Cursor > Use thin stroke for anti-aliased text: **Never**
+    - Profile > Text > Font > 15pt Operator Mono Book (Anti-aliased)
+    - Profile > Terminal > Scroll 10 000
