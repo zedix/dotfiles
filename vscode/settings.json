@@ -1,36 +1,92 @@
 {
-    // Ayu Mirage, Atom One Dark, One Dark Pro, Oceanic Next, Sapphire
-    "workbench.colorTheme": "Gloom Contrast (rainglow)",
-    "workbench.activityBar.visible": false,
-    "workbench.statusBar.visible": true,
-    "workbench.sideBar.location": "left",
+    /*
+    |--------------------------------------------------------------------------
+    | Spacing
+    |--------------------------------------------------------------------------
+    */
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "files.insertFinalNewline": true,
+    "editor.trimAutoWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.eol": "\n",
+
+    /*
+    |--------------------------------------------------------------------------
+    | Editor & Workbench
+    |--------------------------------------------------------------------------
+    */
+
+    "editor.cursorSmoothCaretAnimation": true,
     "editor.fontFamily": "Operator Mono",
     "editor.fontSize": 15,
-    "editor.insertSpaces": true,
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "boundary",
     "editor.renderControlCharacters": false,
+    "explorer.openEditors.visible": 0,
+
+    "files.associations": {
+        "Vagrantfile": "ruby",
+        "all": "yaml",
+        "development": "yaml",
+        "production": "yaml",
+        ".eslintrc": "jsonc",
+        ".eslintrc.json": "jsonc",
+        ".env": "ini",
+        ".env.*": "ini"
+    },
+
+    // Ayu Mirage, Atom One Dark, One Dark Pro, Oceanic Next, Sapphire
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Lichen Contrast (rainglow)",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.statusBar.visible": true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Extension: Prettier
+    |--------------------------------------------------------------------------
+    */
+
+    "prettier.disableLanguages": [],
+    "prettier.requireConfig": true,
+
+    // Enable formatOnSave per-language
     "editor.formatOnSave": false,
-    // Enable per-language
     "[css]": {
-        "editor.formatOnSave": false
-    },
-    "[javascript]": {
-        "editor.formatOnSave": false
-    },
-    "[json]": {
-        "editor.formatOnSave": false
-    },
-    "[vue]": {
         "editor.formatOnSave": true
     },
-    "explorer.openEditors.visible": 0,
-    "importCost.javascriptExtensions": [
-        "\\.vue$"
-    ],
-    "stylelint.enable": true,
-    "css.validate": false,
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "[json]": {
+        "editor.formatOnSave": true
+    },
+    "[vue]": {
+        // Use eslint.autoFixOnSave instead to avoid conflicts
+        "editor.formatOnSave": false
+    },
+
+    /*
+    |--------------------------------------------------------------------------
+    | Extension: Vetur
+    |--------------------------------------------------------------------------
+    */
+
+    // https://code.visualstudio.com/docs/nodejs/vuejs-tutorial
+    // "vetur.format.defaultFormatter.html": "prettier",
+
+    /*
+    |--------------------------------------------------------------------------
+    | Extension: ESLint
+    |--------------------------------------------------------------------------
+    */
+
     "eslint.enable": true,
+    // This settings was required to make prettier work on vue html
+    "eslint.autoFixOnSave": true,
+    "eslint.alwaysShowStatus": true,
     "eslint.options": {
         "extensions": [
             ".html",
@@ -58,23 +114,26 @@
             "autoFix": true
         }
     ],
-    "files.associations": {
-        "Vagrantfile": "ruby",
-        "all": "yaml",
-        "development": "yaml",
-        "production": "yaml",
-        ".eslintrc": "jsonc",
-        ".eslintrc.json": "jsonc",
-        ".env": "ini",
-        ".env.*": "ini"
-    },
-    "files.trimTrailingWhitespace": true,
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
 
-    // ClubMed
+    /*
+    |--------------------------------------------------------------------------
+    | Extension: Stylelint
+    |--------------------------------------------------------------------------
+    */
+
+    "stylelint.enable": true,
+    "css.validate": false,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Extension: Flow
+    |--------------------------------------------------------------------------
+    */
+
     "javascript.validate.enable": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+
     "flow.enabled": true,
     "flow.useNPMPackagedFlow": true,
-    "flow.pathToFlow": "${workspaceFolderBasename}/node_modules/.bin/flow",
+    // "flow.pathToFlow": "${workspaceFolderBasename}/node_modules/.bin/flow",
 }
