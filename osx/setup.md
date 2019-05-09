@@ -93,6 +93,7 @@ Or manually:
 
 ## System Preferences & Security
 
+- Install fonts into `/Library/Fonts`
 - System Preferences > Keyboard > Text > Disable “Correct spelling automatically”
 - System Preferences > Security and Privacy > FileVault > On (makes sure SSD is securely encrypted)
 - System Preferences > Security and Privacy > Firewall > On (extra security measure)
@@ -163,12 +164,29 @@ Run `~/dotfiles/bin/set-default`
     - System Preferences > Keyboard > Shortcuts > Spotlight > [ ]
 
 - iTerm2
-    - General > [X] Update to beta versions
+    - General > [✔] Update to beta test versions when available
     - General > Startup > Open Window Default Arrangement
     - Appearance > [ ] Show per pane title bar
-    - Appearance > [ ] Hide scrollbars
+    - Appearance > [✔] Hide scrollbars
     - Appearance > Theme Dark
     - Profile > Text > Cursor > Vertical bar
     - Profile > Text > Cursor > Use thin stroke for anti-aliased text: **Never**
     - Profile > Text > Font > 15pt Operator Mono Book (Anti-aliased)
     - Profile > Terminal > Scroll 10 000
+
+- VSCode
+
+```sh
+ln -s ~/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+```
+
+Fix font smoothing in Mojave (see https://github.com/Microsoft/vscode/issues/59887)
+
+```sh
+# defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+defaults write com.microsoft.VSCode CGFontRenderingFontSmoothingDisabled 0
+defaults write com.microsoft.VSCode.helper CGFontRenderingFontSmoothingDisabled 0
+defaults write com.microsoft.VSCode.helper.EH CGFontRenderingFontSmoothingDisabled 0
+defaults write com.microsoft.VSCode.helper.NP CGFontRenderingFontSmoothingDisabled 0
+```
+Note: "workbench.fontAliasing" must be set to "default" (not "auto").
