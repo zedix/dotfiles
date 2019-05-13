@@ -13,11 +13,11 @@ Homebrew installs packages to their own directory and then symlinks their files 
 ❯ brew update
 ❯ brew install ack
 ❯ brew install tree
-❯ brew install git (2.17.1)
+❯ brew install git (2.21.0)
 ❯ brew install node (v8.9.3)
 ❯ brew install nvm
-❯ brew install yarn (1.9.4)
-❯ brew install ansible (2.6.2)
+❯ brew install yarn (1.15.2)
+❯ brew install ansible (2.7.10)
 
 ❯ yarn global add @vue/cli
 ❯ yarn global add gulp-cli
@@ -73,6 +73,15 @@ Using [ssh-copy-id](https://www.ssh.com/ssh/copy-id) tool:
 
 ```sh
 ❯ ssh-copy-id remote@XX.XX.XX.XX -pXXXX
+    /usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/Users/xxx/.ssh/id_rsa.pub"
+    /usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+    /usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+    remote@XX.XX.XX.XX’s password:
+
+Number of key(s) added:  1
+
+❯ ssh remote@XX.XX.XX.XX -pXXXX
+❯ vim ~/.ssh/authorized_keys
 ```
 
 Or manually:
@@ -110,52 +119,53 @@ Run `~/dotfiles/bin/set-default`
 ❯ brew cask install 'dropbox'
 ```
 
-- ⬇ 1Password 7
-- ⬇ [Alfred 3](http://www.alfredapp.com/) Replacement for spotlight.
-- ⬇ [App Cleaner](https://freemacsoft.net/appcleaner/)
-- ⬇ [Bartender 3](https://www.macbartender.com/)
-- ⬇ Battle.net
-- ⬇ [Contrast Ratio](http://leaverou.github.io/contrast-ratio/)
-- ⬇ Disk Inventory X
-- ⬇ [Docker](https://docs.docker.com/docker-for-mac/install/)
-- ⬇ [Dropbox](https://www.dropbox.com/) File syncing to the cloud.
-- ⬇ [EyeTV](https://www.geniatech.eu/fr/software/)
-- ⬇ [Firefox](https://www.mozilla.org/fr/firefox/new/)
-- ⬇ [F.lux](https://justgetflux.com/)
-- ⬇ [Google Chrome](https://www.google.com/intl/fr_ALL/chrome/)
-- ⬇ [ImageAlpha](https://pngmini.com/)
-- ⬇ [ImageOptim](https://imageoptim.com/mac)
-- ⬇ iStat Menus
-- ⬇ [iTerm2](https://www.iterm2.com/)
-- ⬇ [LittleSnitch](https://www.obdev.at/products/littlesnitch/index.html)
-- ⬇ [Memory Clean 2](https://fiplab.com/apps/memory-clean-for-mac)
-- ⬇ Molotov
-- 🍏 [Moom](https://manytricks.com/moom/)
-- ⬇ Ngrok
-- ⬇ [Omnifocus](https://www.omnigroup.com/omnifocus)
-- 🍏 Pixelmator
-- ⬇ [PDF Toolkit+](https://itunes.apple.com/us/app/pdf-toolkit-+/id545164971?mt=12) App to cut/split/merge pdfs easily.
-- ⬇ [Poedit](https://poedit.net/)
-- ⬇ [Postman](https://www.getpostman.com/)
-- ⬇ Product Hunt
-- 🍏 Reeder
-- ⬇ Screaming Frog SEO Spider
-- ⬇ [Sequel Pro](https://www.sequelpro.com/)
-- ⬇ [Shift](https://tryshift.com/)
-- ⬇ [Sip](https://sipapp.io/) - Color picker
-- ⬇ Skype
-- 🍏 Slack
-- ⬇ [Spotify](https://www.spotify.com/fr/download/mac/)
-- ⬇ [Station](https://getstation.com/)
-- ⬇ Textual 5
-- ⬇ [Transmission](http://www.transmissionbt.com/) A fast, easy and free BitTorrent client.
-- 🍏 Tweetbot
-- 🍏 [Tyme 2](https://www.tyme-app.com) - https://www.producthunt.com/posts/tyme-2
-- ⬇ Unison
-- ⬇ [Vagrant](https://www.vagrantup.com/downloads.html)
-- ⬇ [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-- ⬇ VLC
-- ⬇ [VSCode](https://code.visualstudio.com/download)
+- ⤓ [1Password 7](https://1password.com/fr/downloads/mac/)
+- ⤓ [Alfred 3](http://www.alfredapp.com/) Replacement for spotlight.
+- ⤓ [App Cleaner](https://freemacsoft.net/appcleaner/)
+- ⤓ [Bartender 3](https://www.macbartender.com/)
+- ⤓ Battle.net
+- ⤓ [Contrast Ratio](http://leaverou.github.io/contrast-ratio/)
+- ⤓ Disk Inventory X
+- ⤓ [Docker](https://docs.docker.com/docker-for-mac/install/)
+- ⤓ [Dropbox](https://www.dropbox.com/) File syncing to the cloud.
+- ⤓ [EyeTV](https://www.geniatech.eu/fr/software/)
+- ⤓ [Firefox](https://www.mozilla.org/fr/firefox/new/)
+- ⤓ [F.lux](https://justgetflux.com/)
+- ⤓ [Google Chrome](https://www.google.com/intl/fr_ALL/chrome/)
+- ⤓ [ImageAlpha](https://pngmini.com/)
+- ⤓ [ImageOptim](https://imageoptim.com/mac)
+- ⤓ [iStat Menus](https://bjango.com/mac/istatmenus/)
+- ⤓ [iTerm2](https://www.iterm2.com/)
+- ⤓ [LittleSnitch](https://www.obdev.at/products/littlesnitch/index.html)
+- ⤓ [Memory Clean 2](https://fiplab.com/apps/memory-clean-for-mac)
+- ⤓ Molotov
+- 🍏[Moom](https://manytricks.com/moom/)
+- ⤓ Ngrok
+- ⤓ [Omnifocus](https://www.omnigroup.com/omnifocus)
+- 🍏Pixelmator
+- ⤓ [PDF Toolkit+](https://itunes.apple.com/us/app/pdf-toolkit-+/id545164971?mt=12) App to cut/split/merge pdfs easily.
+- ⤓ [Poedit](https://poedit.net/)
+- ⤓ [Postman](https://www.getpostman.com/)
+- ⤓ Product Hunt
+- 🍏Reeder
+- ⤓ Screaming Frog SEO Spider
+- ⤓ [Sequel Pro](https://www.sequelpro.com/)
+- ⤓ [Shift](https://tryshift.com/)
+- ⤓ [Sip](https://sipapp.io/) - Color picker
+- ⤓ Skype
+- 🍏Slack
+- ⤓ [Spotify](https://www.spotify.com/fr/download/mac/)
+- ⤓ [Station](https://getstation.com/)
+- ⤓ Textual 5
+- ⤓ [Transmission](http://www.transmissionbt.com/) A fast, easy and free BitTorrent client.
+- ⤓ [Table Plus](https://tableplus.io/)
+- 🍏Tweetbot
+- 🍏[Tyme 2](https://www.tyme-app.com) - https://www.producthunt.com/posts/tyme-2
+- ⤓ Unison
+- ⤓ [Vagrant](https://www.vagrantup.com/downloads.html)
+- ⤓ [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+- ⤓ [VLC](https://www.videolan.org/vlc/index.fr.html)
+- ⤓ [VSCode](https://code.visualstudio.com/download)
 
 
 ## Configure Applications
@@ -176,9 +186,13 @@ Run `~/dotfiles/bin/set-default`
 
 - VSCode
 
+Install settings
+
 ```sh
 ln -s ~/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ```
+
+Install command line tools: `Shell command: install 'code' command in PATH`
 
 Fix font smoothing in Mojave (see https://github.com/Microsoft/vscode/issues/59887)
 
