@@ -37,6 +37,7 @@
         ".env.*": "ini"
     },
 
+    // Rainglow “Heroku” (Taylor Otwell)
     // Ayu Mirage, Atom One Dark, One Dark Pro, Oceanic Next, Sapphire
     "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Lichen Contrast (rainglow)",
@@ -49,7 +50,8 @@
     |--------------------------------------------------------------------------
     */
 
-    "prettier.disableLanguages": [],
+    // https://github.com/vuejs/vetur/issues/1195#issuecomment-481941708
+    "prettier.disableLanguages": ["vue"],
     "prettier.requireConfig": true,
 
     // Enable formatOnSave per-language
@@ -65,7 +67,7 @@
     },
     "[vue]": {
         // Use eslint.autoFixOnSave instead to avoid conflicts
-        "editor.formatOnSave": false
+        "editor.formatOnSave": true
     },
 
     /*
@@ -76,6 +78,7 @@
 
     // https://code.visualstudio.com/docs/nodejs/vuejs-tutorial
     // "vetur.format.defaultFormatter.html": "prettier",
+    "vetur.format.defaultFormatter.js": "prettier-eslint",
 
     /*
     |--------------------------------------------------------------------------
@@ -133,7 +136,7 @@
     "javascript.validate.enable": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
 
-    "flow.enabled": true,
-    "flow.useNPMPackagedFlow": true,
+    // "flow.enabled": true,
+    // "flow.useNPMPackagedFlow": true,
     // "flow.pathToFlow": "${workspaceFolderBasename}/node_modules/.bin/flow",
 }
