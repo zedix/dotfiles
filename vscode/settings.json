@@ -6,8 +6,8 @@
     */
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
-    "files.insertFinalNewline": true,
     "editor.trimAutoWhitespace": true,
+    "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "files.eol": "\n",
@@ -21,11 +21,12 @@
     "editor.cursorSmoothCaretAnimation": true,
     "editor.fontFamily": "Operator Mono",
     "editor.fontSize": 15,
+    "editor.glyphMargin": true,
+    "editor.folding": false,
     "editor.minimap.enabled": false,
+    "explorer.openEditors.visible": 0,
     "editor.renderWhitespace": "boundary",
     "editor.renderControlCharacters": false,
-    "explorer.openEditors.visible": 0,
-
     "files.associations": {
         "Vagrantfile": "ruby",
         "all": "yaml",
@@ -34,15 +35,15 @@
         ".eslintrc": "jsonc",
         ".eslintrc.json": "jsonc",
         ".env": "ini",
-        ".env.*": "ini"
+        ".env.*": "ini",
     },
 
     // Rainglow “Heroku” (Taylor Otwell)
     // Ayu Mirage, Atom One Dark, One Dark Pro, Oceanic Next, Sapphire
-    "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "Lichen Contrast (rainglow)",
+    "workbench.colorTheme": "Heroku (rainglow)",
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.statusBar.visible": true,
+    "workbench.activityBar.visible": false,
 
     /*
     |--------------------------------------------------------------------------
@@ -66,15 +67,9 @@
         "editor.formatOnSave": true
     },
     "[vue]": {
-        // Use eslint.autoFixOnSave instead to avoid conflicts
-        "editor.formatOnSave": true
+        // Use eslint.autoFixOnSave instead to avoid conflicts (e.g. with `vue/html-indent`)
+        "editor.formatOnSave": false
     },
-
-    /*
-    |--------------------------------------------------------------------------
-    | Extension: Vetur
-    |--------------------------------------------------------------------------
-    */
 
     // https://code.visualstudio.com/docs/nodejs/vuejs-tutorial
     // "vetur.format.defaultFormatter.html": "prettier",
@@ -94,8 +89,9 @@
         "extensions": [
             ".html",
             ".js",
+            ".json",
+            ".jsx",
             ".vue",
-            ".jsx"
         ]
     },
     "eslint.nodePath": "${workspaceFolderBasename}/node_modules/",
@@ -124,8 +120,8 @@
     |--------------------------------------------------------------------------
     */
 
-    "stylelint.enable": true,
     "css.validate": false,
+    "stylelint.enable": true,
 
     /*
     |--------------------------------------------------------------------------
