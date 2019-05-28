@@ -110,6 +110,13 @@ Or manually:
 - System Preferences > File Sharing > Off
 - System Preferences > Trackpad > Tap to click
 
+- Show hidden files in Finder
+
+```
+defaults write com.apple.finder AppleShowAllFiles true
+killall Finder
+```
+
 Run `~/dotfiles/bin/set-default`
 
 ## Install Applications
@@ -124,6 +131,7 @@ Run `~/dotfiles/bin/set-default`
 - ⤓ [App Cleaner](https://freemacsoft.net/appcleaner/)
 - ⤓ [Bartender 3](https://www.macbartender.com/)
 - ⤓ Battle.net
+- ⤓ [Clean my mac](https://cleanmymac.macpaw.com/)
 - ⤓ [Contrast Ratio](http://leaverou.github.io/contrast-ratio/)
 - ⤓ Disk Inventory X
 - ⤓ [Docker](https://docs.docker.com/docker-for-mac/install/)
@@ -204,3 +212,9 @@ defaults write com.microsoft.VSCode.helper.EH CGFontRenderingFontSmoothingDisabl
 defaults write com.microsoft.VSCode.helper.NP CGFontRenderingFontSmoothingDisabled 0
 ```
 Note: "workbench.fontAliasing" must be set to "default" (not "auto").
+
+
+- Vagrant
+    -> "VBoxManage: error: Failed to create the host-only adapter"
+        -> Go to: Security & Privacy and under the General Tab, click the "Oracle America, Inc." Allow button.
+        -> Reinstall Vagrant
