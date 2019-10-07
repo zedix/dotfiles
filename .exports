@@ -2,7 +2,8 @@
 export EDITOR="code -w"
 
 # Setup PATH
-export PATH="/usr/local/bin:/usr/local/sbin:$ZSH/bin:$PATH"
+# /opt/local/bin/ for `/opt/local/bin/port` only
+export PATH="/usr/local/bin:/usr/local/sbin:/opt/local/bin/:$ZSH/bin:$PATH"
 
 # Setup PATH for NVM
 export NVM_DIR="$HOME/.nvm"
