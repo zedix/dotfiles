@@ -16,8 +16,13 @@ function most_commits() {
     git log --no-merges --format='%aE' $1 | sort | uniq -c | sort
 }
 
+# kill-port 3000
 function kill-port() {
-    lsof -t -i tcp:$1 | xargs kill
+    lsof -t -i tcp:$1 | xargs kill -9
+}
+
+function check-port() {
+    lsof -i tcp:$1
 }
 
 # `tre` is a shorthand for `tree` with hidden files and color enabled, ignoring
