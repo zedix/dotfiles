@@ -22,6 +22,7 @@ Homebrew installs packages to their own directory and then symlinks their files 
 ❯ yarn global add @vue/cli
 ❯ yarn global add gulp-cli
 ❯ yarn global add lighthouse
+❯ yarn global add netlify-cli
 
 # ❯ brew install httpie
 # ❯ brew install php72
@@ -48,6 +49,7 @@ Homebrew installs packages to their own directory and then symlinks their files 
 ## Set up SSH public key authentication on Github / Bitbucket
 
 https://help.github.com/articles/connecting-to-github-with-ssh/
+https://docs.gitlab.com/ee/ssh/
 
 ```sh
 ❯ ls -al ~/.ssh
