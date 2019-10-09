@@ -12,6 +12,7 @@ Homebrew installs packages to their own directory and then symlinks their files 
 
 ❯ brew update
 ❯ brew install ack
+❯ brew install caddy
 ❯ brew install tree
 ❯ brew install git (2.21.0)
 ❯ brew install node (v8.9.3)
