@@ -1,4 +1,41 @@
 # -----------------------------------------------------------------------------
+# Utilities
+# -----------------------------------------------------------------------------
+# https://dotfiles.github.io/
+
+alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
+alias tf='tail -f'
+alias tn='tail -n'
+alias df="df -h"
+alias grep='GREP_COLOR="1;37;45" LANG=C grep --color=auto'
+alias reload!='. ~/.zshrc'
+alias pp='python -mjson.tool'
+alias meteo='curl -4 http://wttr.in/Paris'
+alias week='date +%V'
+
+# Simple HTTP Server
+# To serve static files from the current working directory (on http://localhost:2015)
+alias server='caddy'
+# alias server='python -m SimpleHTTPServer 8000'
+
+# JS
+alias nfresh="rm -rf node_modules/ yarn.lock && yarn"
+
+# IP adresses
+# alias ip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+
+# View HTTP traffic
+alias ports='netstat -tulanp'
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
+# Vagrant
+alias vh='vagrant halt'
+alias vu='vagrant up'
+
+# -----------------------------------------------------------------------------
 # Dir navigation
 # -----------------------------------------------------------------------------
 
@@ -26,7 +63,7 @@ alias la="ls -la ${colorflag}"
 
 # List only directories
 alias lsd='ls -l | grep "^d"'
-#alias ll='ls -alF --group-directories-first --color=always'
+# alias ll='ls -ahlF --group-directories-first --color=always'
 
 # Always use color output for `ls`
 if [[ "$OSTYPE" =~ ^darwin ]]; then
@@ -37,42 +74,12 @@ else
 fi
 
 # -----------------------------------------------------------------------------
-# Utilities
-# -----------------------------------------------------------------------------
-
-alias tf='tail -f'
-alias tn='tail -n'
-alias df="df -h"
-alias grep='GREP_COLOR="1;37;45" LANG=C grep --color=auto'
-alias ports='netstat -tulanp'
-alias reload!='. ~/.zshrc'
-alias pp='python -mjson.tool'
-alias meteo='curl -4 http://wttr.in/Paris'
-alias week='date +%V'
-
-# IP adresses
-# alias ip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en0"
-
-# View HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
-
-# Vagrant
-alias vh='vagrant halt'
-alias vu='vagrant up'
-
-# -----------------------------------------------------------------------------
 # GIT
 # -----------------------------------------------------------------------------
 
 alias push="git push origin master"
 alias go='git checkout'
 alias gom='git checkout master'
-
-# Undo a `git push`
-alias undopush="git push -f origin HEAD^:master"
 
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
