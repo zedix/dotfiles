@@ -169,7 +169,9 @@ Run `~/dotfiles/bin/set-default`
 - ⤓ [Station](https://getstation.com/)
 - ⤓ Textual 5
 - ⤓ [Transmission](http://www.transmissionbt.com/) A fast, easy and free BitTorrent client.
+- ⤓ [Transmit](https://panic.com/transmit/)
 - ⤓ [Table Plus](https://tableplus.io/)
+- ⤓ [Timemator 2](https://timemator.com/)
 - 🍏Tweetbot
 - 🍏[Tyme 2](https://www.tyme-app.com) - https://www.producthunt.com/posts/tyme-2
 - ⤓ Unison
@@ -221,3 +223,6 @@ Note: "workbench.fontAliasing" must be set to "default" (not "auto").
     -> "VBoxManage: error: Failed to create the host-only adapter"
         -> Go to: Security & Privacy and under the General Tab, click the "Oracle America, Inc." Allow button.
         -> Reinstall Vagrant
+
+- Calendar
+    -> To sync on MacOS a Shared Google Calendar, go to https://calendar.google.com/calendar/syncselect
