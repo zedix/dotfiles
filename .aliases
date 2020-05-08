@@ -108,6 +108,9 @@ alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
+# Kill CoreAudio
+alias fixaudio="sudo killall coreaudiod"
+
 # Flush the DNS on Mac
 alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder"
 
