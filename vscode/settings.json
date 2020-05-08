@@ -18,13 +18,12 @@
     */
     "breadcrumbs.enabled": false,
     "editor.cursorSmoothCaretAnimation": true,
-    "editor.fontFamily": "Cascadia Code",
+    "editor.fontFamily": "JetBrains Mono",
     "editor.fontSize": 15,
     "editor.glyphMargin": true,
     "editor.folding": false,
     "editor.minimap.enabled": false,
     "explorer.openEditors.visible": 0,
-    "editor.renderWhitespace": "boundary",
     "editor.renderControlCharacters": false,
     "editor.scrollBeyondLastLine": false,
     "files.associations": {
@@ -41,7 +40,7 @@
     // Rainglow "Jewel" (Christoph Rumpel)
     // Rainglow "Gloom"
     // Ayu Mirage, Atom One Dark, One Dark Pro, Oceanic Next, Sapphire
-    "workbench.colorTheme": "Jewel Contrast (rainglow)",
+    "workbench.colorTheme": "Tomorrow Night Blue",
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": false,
@@ -61,6 +60,10 @@
         "editor.formatOnSave": true
     },
     "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
     },
     "[json]": {
@@ -180,6 +183,12 @@
             "value": "#42b883"
         }
     ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "editor.copyWithSyntaxHighlighting": false,
+    "window.zoomLevel": 0,
+    "editor.lineNumbers": "off",
     // "flow.enabled": true,
     // "flow.useNPMPackagedFlow": true,
     // "flow.pathToFlow": "${workspaceFolderBasename}/node_modules/.bin/flow",
