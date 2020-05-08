@@ -19,6 +19,7 @@ Homebrew installs packages to their own directory and then symlinks their files 
 ❯ brew install nvm
 ❯ brew install yarn (1.15.2)
 ❯ brew install ansible (2.7.10)
+❯ brew install php@7.4
 
 ❯ yarn global add @vue/cli
 ❯ yarn global add gulp-cli
