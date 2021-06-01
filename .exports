@@ -4,6 +4,8 @@ export EDITOR="code -w"
 # Setup PATH
 # /opt/local/bin/ for `/opt/local/bin/port` only
 export PATH="/usr/local/bin:/usr/local/sbin:/opt/local/bin/:$ZSH/bin:$PATH"
+# Use python3 from brew
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # Setup PATH for NVM
 export NVM_DIR="$HOME/.nvm"
