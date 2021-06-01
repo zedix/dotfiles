@@ -227,3 +227,8 @@ Note: "workbench.fontAliasing" must be set to "default" (not "auto").
 
 - Calendar
     -> To sync on MacOS a Shared Google Calendar, go to https://calendar.google.com/calendar/syncselect
+
+
+## Wallpapers
+
+- https://hector.me/wavey (https://twitter.com/adamwathan/status/1291357343352070144)
