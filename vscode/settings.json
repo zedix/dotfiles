@@ -16,7 +16,7 @@
     | Editor & Workbench
     |--------------------------------------------------------------------------
     */
-    "breadcrumbs.enabled": false,
+    "breadcrumbs.enabled": true,
     "editor.cursorSmoothCaretAnimation": true,
     "editor.fontFamily": "JetBrains Mono",
     "editor.fontSize": 15,
@@ -36,11 +36,6 @@
         ".env": "ini",
         ".env.*": "ini"
     },
-    // Rainglow “Heroku” (Taylor Otwell)
-    // Rainglow "Jewel" (Christoph Rumpel)
-    // Rainglow "Gloom"
-    // Ayu Mirage, Atom One Dark, One Dark Pro, Oceanic Next, Sapphire
-    "workbench.colorTheme": "Tomorrow Night Blue",
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": false,
@@ -55,19 +50,21 @@
     ],
     "prettier.requireConfig": true,
     // Enable formatOnSave per-language
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "[css]": {
         "editor.formatOnSave": true
     },
     "[javascript]": {
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[javascriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
     },
     "[json]": {
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[php]": {
         "editor.tabSize": 4,
@@ -81,9 +78,7 @@
     | Extension: ESLint
     |--------------------------------------------------------------------------
     */
-    "eslint.enable": true,
     // This settings was required to make prettier work on vue html
-    "eslint.autoFixOnSave": true,
     "eslint.alwaysShowStatus": true,
     "eslint.options": {
         "extensions": [
@@ -188,7 +183,22 @@
     },
     "editor.copyWithSyntaxHighlighting": false,
     "window.zoomLevel": 0,
-    "editor.lineNumbers": "off",
+    "workbench.colorTheme": "Lichen Contrast (rainglow)",
+    "prettier.documentSelectors": [
+        "*.njk"
+    ],
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
     // "flow.enabled": true,
     // "flow.useNPMPackagedFlow": true,
     // "flow.pathToFlow": "${workspaceFolderBasename}/node_modules/.bin/flow",
