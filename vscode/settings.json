@@ -44,13 +44,7 @@
     | Extension: Prettier
     |--------------------------------------------------------------------------
     */
-    // https://github.com/vuejs/vetur/issues/1195#issuecomment-481941708
-    "prettier.disableLanguages": [
-        "vue"
-    ],
     "prettier.requireConfig": true,
-    // Enable formatOnSave per-language
-    "editor.formatOnSave": true,
     "[css]": {
         "editor.formatOnSave": true
     },
@@ -70,8 +64,8 @@
         "editor.tabSize": 4,
     },
     "[vue]": {
-        // Use eslint.autoFixOnSave instead to avoid conflicts (e.g. with `vue/html-indent`)
-        "editor.formatOnSave": false
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     /*
     |--------------------------------------------------------------------------
@@ -91,22 +85,10 @@
     },
     "eslint.nodePath": "${workspaceFolderBasename}/node_modules/",
     "eslint.validate": [
-        {
-            "language": "html",
-            "autoFix": true
-        },
-        {
-            "language": "vue",
-            "autoFix": true
-        },
-        {
-            "language": "javascript",
-            "autoFix": true
-        },
-        {
-            "language": "javascriptreact",
-            "autoFix": true
-        }
+        "html",
+        "vue",
+        "javascript",
+        "javascriptreact"
     ],
     /*
     |--------------------------------------------------------------------------
@@ -122,7 +104,6 @@
     */
     "javascript.validate.enable": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "vetur.format.defaultFormatter.ts": "prettier-tslint",
     "editor.fontLigatures": true,
     "peacock.favoriteColors": [
         {
@@ -182,7 +163,6 @@
         "source.fixAll.eslint": true
     },
     "editor.copyWithSyntaxHighlighting": false,
-    "window.zoomLevel": 0,
     "workbench.colorTheme": "Lichen Contrast (rainglow)",
     "prettier.documentSelectors": [
         "*.njk"
@@ -193,12 +173,19 @@
     "[yaml]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "vetur.validation.script": false,
+    "vetur.validation.style": false,
+    "vetur.validation.template": false,
+    "javascript.format.enable": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.enableDebugLogs": true,
     // "flow.enabled": true,
     // "flow.useNPMPackagedFlow": true,
     // "flow.pathToFlow": "${workspaceFolderBasename}/node_modules/.bin/flow",
