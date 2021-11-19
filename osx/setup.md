@@ -19,7 +19,7 @@ Homebrew installs packages to their own directory and then symlinks their files 
 ❯ brew install nvm
 ❯ brew install yarn (1.15.2)
 ❯ brew install ansible (2.7.10)
-❯ brew install php@7.4
+❯ brew install php@8.1
 
 ❯ yarn global add @vue/cli
 ❯ yarn global add gulp-cli
@@ -135,9 +135,8 @@ Run `~/dotfiles/bin/set-default`
 - ⤓ [App Cleaner](https://freemacsoft.net/appcleaner/)
 - ⤓ [Bartender 3](https://www.macbartender.com/)
 - ⤓ Battle.net
-- ⤓ [Clean my mac](https://cleanmymac.macpaw.com/)
+- ⤓ [Clean my mac](https://macpaw.com/fr/cleanmymac)
 - ⤓ [Contrast Ratio](http://leaverou.github.io/contrast-ratio/)
-- ⤓ Disk Inventory X
 - ⤓ [Docker](https://docs.docker.com/docker-for-mac/install/)
 - ⤓ [Dropbox](https://www.dropbox.com/) File syncing to the cloud.
 - ⤓ [EyeTV](https://www.geniatech.eu/fr/software/)
@@ -151,30 +150,31 @@ Run `~/dotfiles/bin/set-default`
 - ⤓ [LittleSnitch](https://www.obdev.at/products/littlesnitch/index.html)
 - ⤓ [Memory Clean 2](https://fiplab.com/apps/memory-clean-for-mac)
 - ⤓ Molotov
-- 🍏[Moom](https://manytricks.com/moom/)
+- 🍏 [Moom](https://manytricks.com/moom/)
 - ⤓ Ngrok
 - ⤓ [Omnifocus](https://www.omnigroup.com/omnifocus)
-- 🍏Pixelmator
+- 🍏 Pixelmator
 - ⤓ [PDF Toolkit+](https://itunes.apple.com/us/app/pdf-toolkit-+/id545164971?mt=12) App to cut/split/merge pdfs easily.
 - ⤓ [Poedit](https://poedit.net/)
 - ⤓ [Postman](https://www.getpostman.com/)
 - ⤓ Product Hunt
-- 🍏Reeder
+- 🍏 Reeder
 - ⤓ Screaming Frog SEO Spider
 - ⤓ [Sequel Pro](https://www.sequelpro.com/)
 - ⤓ [Shift](https://tryshift.com/)
 - ⤓ [Sip](https://sipapp.io/) - Color picker
 - ⤓ Skype
-- 🍏Slack
+- 🍏 Slack
 - ⤓ [Spotify](https://www.spotify.com/fr/download/mac/)
 - ⤓ [Station](https://getstation.com/)
 - ⤓ Textual 5
 - ⤓ [Transmission](http://www.transmissionbt.com/) A fast, easy and free BitTorrent client.
 - ⤓ [Transmit](https://panic.com/transmit/)
 - ⤓ [Table Plus](https://tableplus.io/)
+    - 🍏 [Sequel Ace](https://tableplus.io/)
 - ⤓ [Timemator 2](https://timemator.com/)
-- 🍏Tweetbot
-- 🍏[Tyme 2](https://www.tyme-app.com) - https://www.producthunt.com/posts/tyme-2
+- 🍏 Tweetbot
+- 🍏 [Tyme 2](https://www.tyme-app.com) - https://www.producthunt.com/posts/tyme-2
 - ⤓ Unison
 - ⤓ [Vagrant](https://www.vagrantup.com/downloads.html)
 - ⤓ [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
