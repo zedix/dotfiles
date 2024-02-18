@@ -12,6 +12,8 @@ alias reload!='. ~/.zshrc'
 alias pp='python -mjson.tool'
 alias meteo='curl -4 http://wttr.in/Paris'
 alias week='date +%V'
+alias i='neofetch'
+alias p='pnpm'
 
 # Simple HTTP Server
 # To serve static files from the current working directory (on http://localhost:2015)
@@ -79,7 +81,10 @@ fi
 
 alias push="git push origin master"
 alias go='git checkout'
-alias gom='git checkout master'
+alias gb='git branch --sort=-committerdate'
+alias gom='git checkout main'
+# https://gist.github.com/JeffreyWay/e8d8bfae8aaa1b7f693e
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
@@ -97,9 +102,6 @@ function gitexport(){
     mkdir -p "$1"
     git archive master | tar -x -C "$1"
 }
-
-# https://gist.github.com/JeffreyWay/e8d8bfae8aaa1b7f693e
-alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # -----------------------------------------------------------------------------
 # Mac OS

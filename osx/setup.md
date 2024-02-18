@@ -17,9 +17,14 @@ Homebrew installs packages to their own directory and then symlinks their files 
 # ❯ brew install git (2.34.0  vs git version 2.30.1 (Apple Git-130))
 ❯ brew install node (v17.0.1)
 # ❯ brew install nvm
+❯ brew install neofetch
 ❯ brew install yarn (1.22.17)
 ❯ brew install ansible (2.11.6)
 ❯ brew install php@8.1
+
+# GPG
+❯ brew install gnupg
+# gpg --full-generate-key
 
 ❯ yarn global add @vue/cli
 ❯ yarn global add netlify-cli
@@ -128,12 +133,15 @@ Run `~/dotfiles/bin/set-default`
 
 - ⤓ [1Password 7](https://1password.com/fr/downloads/mac/)
 - ⤓ [Alfred 4](http://www.alfredapp.com/) Replacement for spotlight.
-- ⤓ [AmpliTube 5](https://www.ikmultimedia.com/products/amplitube5/) via IK Product Manager
+- ⤓ [IK Product Manager app](https://www.ikmultimedia.com/products/axeio/index.php?p=download)
+    -> [AmpliTube 5](https://www.ikmultimedia.com/products/amplitube5/) via IK Product Manager
+    -> [Axe IO Control Panel](https://www.ikmultimedia.com/products/axeio/index.php?p=download)
 - ⤓ [App Cleaner](https://freemacsoft.net/appcleaner/)
 - ⤓ [Bartender 3](https://www.macbartender.com/)
 - ⤓ Bitwarden
 - ⤓ Battle.net
 - ⤓ [Clean my mac](https://macpaw.com/fr/cleanmymac)
+- ⤓ [Clean shot](https://cleanshot.com/)
 - ⤓ [Contrast Ratio](http://leaverou.github.io/contrast-ratio/)
 - 🍏 DaisyDisk
 - ⤓ [Docker](https://docs.docker.com/docker-for-mac/install/)
@@ -152,7 +160,7 @@ Run `~/dotfiles/bin/set-default`
 - ≈ [Moom](https://manytricks.com/moom/)
 - ⤓ Ngrok
 - ⤓ [Omnifocus](https://www.omnigroup.com/omnifocus)
-- 🍏 Pixelmator
+- 🍏 Pixelmator Pro 2.3 (19,99 €)
 - ⤓ [PDF Toolkit+](https://itunes.apple.com/us/app/pdf-toolkit-+/id545164971?mt=12) App to cut/split/merge pdfs easily.
 - ⤓ [Poedit](https://poedit.net/)
 - ⤓ [Postman](https://www.getpostman.com/)

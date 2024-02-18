@@ -16,7 +16,7 @@ export NVM_DIR="$HOME/.nvm"
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
-export HISTFILE=~/.zhistory
+export HISTFILE=~/.zsh_history
 
 # Make bash history ignore duplicates and commands such as ls, ll, cd, pwd
 export HISTIGNORE="&:l[sla]:cd:cd -:pwd:exit:date:* --help"
