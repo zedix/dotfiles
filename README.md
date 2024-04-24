@@ -9,8 +9,23 @@ zsh -c "`curl -fsSL https://raw.githubusercontent.com/zedix/dotfiles/master/inst
 git config --global user.email user@domain.com
 ```
 
-## VSCode
+## Updating
+
+Run `zprezto-update` to automatically check if there is an update to Prezto.
 
 ```sh
-ln -sf ~/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+cd
+zprezto-update
 ```
+
+## Prompt `powerlevel10k`
+
+```sh
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
+p10k configure
+vim ~/.p10k.zsh
+```
+
+Warp Issues:
+- https://github.com/warpdotdev/Warp/issues/2155
