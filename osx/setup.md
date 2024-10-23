@@ -1,5 +1,14 @@
 # Setup Mac OS X
 
+## Install PHP/Composer/Laravel
+
+https://php.new/
+
+```sh
+❯ /bin/bash -c "$(curl -fsSL https://php.new/install/mac)"
+❯ composer run dev
+```
+
 ## Install Homebrew + packages
 
 https://brew.sh/

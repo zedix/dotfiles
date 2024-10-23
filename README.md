@@ -18,7 +18,10 @@ cd
 zprezto-update
 ```
 
-## Prompt `powerlevel10k`
+## Prompts `powerlevel10k`
+
+- [Starship](https://starship.rs/)
+- [P10k](https://github.com/romkatv/powerlevel10k)
 
 ```sh
 brew tap homebrew/cask-fonts
